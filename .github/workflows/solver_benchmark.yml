@@ -34,7 +34,7 @@ jobs:
       - name: Run solver benchmark
         run: |
           python QAP_python/scripts/benchmark_all.py benchmark_results
-          cat benchmark_results/benchmark_summary.md >> "$GITHUB_STEP_SUMMARY"
+          cat benchmark_results/step_summary.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload benchmark results
         uses: actions/upload-artifact@v4

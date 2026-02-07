@@ -347,8 +347,13 @@ def main() -> None:
     print(f"Summary written to {summary_path}")
     print(f"Charts: {', '.join(str(p) for p in chart_paths.values())}")
 
-    # stdout gets plain tables only (base64 images too large for step summary)
+    # Write a plain summary for GitHub step summary
     plain_summary = format_summary(small_results, benchmark_results, chart_paths=None)
+    plain_path = out_dir / "step_summary.md"
+    with open(plain_path, "w", encoding="utf-8") as f:
+        f.write(plain_summary)
+    print(f"Step summary written to {plain_path}")
+
     print()
     print(plain_summary)
 
