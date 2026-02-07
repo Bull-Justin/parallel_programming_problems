@@ -28,8 +28,5 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# Claude Code
-.claude/
-
-# Benchmark output (generated, not tracked)
+# Benchmark output
 benchmark_results/
